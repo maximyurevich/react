@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "esbuild build",
+      "command": "yarn esbuild ${fileDirname}/${fileBasename} --bundle --outfile=${fileDirname}/${fileBasenameNoExtension}.js --loader:.jsx=jsx --sourcemap",
+      "type": "shell",
+      "args": [],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "esbuild watch",
+      "command": "yarn esbuild ${fileDirname}/${fileBasename} --bundle --outfile=${fileDirname}/${fileBasenameNoExtension}.js --loader:.jsx=jsx --sourcemap --watch",
+      "type": "shell",
+      "args": []
+    }
+  ]
+}
